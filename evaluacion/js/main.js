@@ -1,11 +1,10 @@
-// Datos de productos con imágenes locales
 const defaultProducts = [
     { id: 1, title: 'Comida para Perro', body: 'Comida premium para perros adultos.', image: '/images/alimentoperro.jpg' },
     { id: 2, title: 'Juguete para Perro', body: 'Juguete duradero para mantener a tu perro entretenido.', image: '/images/jueguetes.jpg' },
     { id: 3, title: 'Cama para Perro', body: 'Cama cómoda y resistente para perros de tamaño grande.', image: '/images/cama.jpg' }
 ];
 
-// Función para renderizar productos
+
 const renderProducts = (products) => {
     const productList = document.getElementById('product-list');
     productList.innerHTML = ''; // Limpiar productos actuales
@@ -23,7 +22,7 @@ const renderProducts = (products) => {
     });
 };
 
-// Función para filtrar productos
+
 const filterProducts = () => {
     const searchBox = document.getElementById('searchBox');
     const searchText = searchBox.value.toLowerCase();
@@ -36,7 +35,6 @@ const filterProducts = () => {
     renderProducts(filteredPosts);
 };
 
-// Función para cargar productos desde una API
 const fetchProducts = async () => {
     try {
         const response = await fetch('https://api.example.com/products'); // Reemplaza con la URL de la API real
@@ -51,16 +49,16 @@ const fetchProducts = async () => {
     }
 };
 
-// Función para inicializar la página
+
 const init = async () => {
     const products = await fetchProducts();
     renderProducts(products);
 
-    // Evento de búsqueda
+   
     document.getElementById('searchBox').addEventListener('input', filterProducts);
 };
 
-// Función para añadir productos al carrito (ejemplo)
+
 const addToCart = (productId) => {
     Swal.fire({
         title: 'Producto Añadido',
@@ -70,5 +68,5 @@ const addToCart = (productId) => {
     });
 };
 
-// Espera a que el DOM se cargue completamente
+
 document.addEventListener('DOMContentLoaded', init);
