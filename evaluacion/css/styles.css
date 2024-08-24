@@ -1,4 +1,4 @@
-/* Estilos básicos */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -61,40 +61,40 @@ main {
     max-height: 200px;
     object-fit: cover;
     border-radius: 8px;
-    transition: transform 0.3s ease; /* Transición suave para la imagen */
+    transition: transform 0.3s ease;
 }
 
 .product:hover img {
-    transform: scale(1.1); /* Efecto de zoom en la imagen al pasar el ratón */
+    transform: scale(1.1); 
 }
 
 .product h2 {
     margin: 10px 0;
-    color: #333; /* Color de texto gris oscuro */
+    color: #333; 
     font-size: 22px;
 }
 
 .product p {
     margin: 0 0 15px;
-    color: #666; /* Color de texto gris medio */
+    color: #666; 
 }
 
 .product button {
     padding: 10px 25px;
     font-size: 18px;
-    background-color: #4CAF50; /* Color verde para el botón */
+    background-color: #4CAF50;
     color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    transition: background-color 0.3s ease; 
 }
 
 .product button:hover {
-    background-color: #45a049; /* Color verde más oscuro cuando se pasa el cursor */
+    background-color: #45a049;
 }
 
-/* Estilos responsivos */
+
 @media (max-width: 600px) {
     header, footer {
         padding: 15px;
